@@ -12,7 +12,7 @@ For running this project on a web interface, you have to use [this frontend](htt
 ## The server is listening on 
 `http://localhost:3000`
 
-## Extensions
+## Packages
   - bcrypt
   - express
   - jsonwebtoken
@@ -21,5 +21,5 @@ For running this project on a web interface, you have to use [this frontend](htt
   - multer
   
 Possibility of using others extensions to test the password and email :
-  - password-validator
+  - [password-validator](https://www.npmjs.com/package/password-validator) 
   - email-validator
