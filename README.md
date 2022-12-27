@@ -13,13 +13,12 @@ For running this project on a web interface, you have to use [this frontend](htt
 `http://localhost:3000`
 
 ## Packages
-  - bcrypt
-  - express
-  - jsonwebtoken
-  - mongoose
-  - mongoose-unique-validator
-  - multer
+  - [bcrypt](https://www.npmjs.com/package/bcrypt)
+  - [express](https://www.npmjs.com/package/express)
+  - [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)
+  - [mongoose](https://www.npmjs.com/package/mongoose)
+  - [mongoose-unique-validator](https://www.npmjs.com/package/mongoose-unique-validator)
+  - [multer](https://www.npmjs.com/package/multer)
   
-Possibility of using others extensions to test the password and email :
+Possibility of using others extensions to test the password :
   - [password-validator](https://www.npmjs.com/package/password-validator) 
-  - email-validator
