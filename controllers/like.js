@@ -3,12 +3,12 @@ const Sauce = require('../models/Sauce');
 exports.likeSauce = (req, res, next) => {
     Sauce.findOne({ _id: req.params.id})
     .then((sauce)=> {
-        console.log('contenu', sauce);
-        // si le userliked est False et si like === 1 
+        
+        
         switch(req.body.like){
         
             case 1 :
-            //like = 1 (likes =+ 1)
+            //// si le userId n'est pas dans l'array et que like === 1 
                 if(!sauce.usersLiked.includes(req.body.userId) && req.body.like === 1){
                     console.log("les instructions seront éxécutés")
                     //mise a jour de la base de données 
@@ -24,7 +24,7 @@ exports.likeSauce = (req, res, next) => {
             break;
             
             case -1:        
-            //like =-1 (dislikes =+ 1)
+            //// si le userId n'est pas dans l'array et que dislike === 1 ou like === -1
                 if(!sauce.usersDisliked.includes(req.body.userId) && req.body.like === -1){
                 console.log("les instructions seront éxécutés")
                 //mise a jour de la base de données 
@@ -40,7 +40,7 @@ exports.likeSauce = (req, res, next) => {
             break;
                 
             case 0:
-                //like = 0 (likes neutre, pas de vote)
+                //si le userId n'est pas dans l'array et que le like === 0
                 if(sauce.usersLiked.includes(req.body.userId) && req.body.like === 0){
                         //mise a jour de la base de données 
                     Sauce.updateOne({_id: req.params.id},
@@ -53,7 +53,7 @@ exports.likeSauce = (req, res, next) => {
                         .catch((error) => res.status(400).json({ error}));
                     };
                     
-                    //après un like = -1 on met un like = 0 (likes neutre, pas de vote, on enleve le dislike)
+                //si le userId n'est pas dans l'array et que le dislike === 0
                 if(sauce.usersDisliked.includes(req.body.userId) && req.body.like === 0){
                         //mise a jour de la base de données 
                     Sauce.updateOne({_id: req.params.id},

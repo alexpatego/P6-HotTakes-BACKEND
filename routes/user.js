@@ -2,10 +2,10 @@ const express = require('express');
 const router = express.Router();
 
 const userCtrl = require('../controllers/user');
-// const checkMail = require('../middleware/emailValidator');
-// const password = require('../middleware/passwordValidator')
 
+// s'enregistre
 router.post('/signup', userCtrl.signup);
+// se connecte
 router.post('/login', userCtrl.login);
 
 module.exports = router;
