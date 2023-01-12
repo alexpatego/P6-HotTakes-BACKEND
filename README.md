@@ -19,6 +19,7 @@ For running this project on a web interface, you have to use [this frontend](htt
   - [mongoose](https://www.npmjs.com/package/mongoose)
   - [mongoose-unique-validator](https://www.npmjs.com/package/mongoose-unique-validator)
   - [multer](https://www.npmjs.com/package/multer)
+  - [dotenv](https://www.npmjs.com/package/dotenv)
   
 Possibility of using others extensions to test the password :
   - [password-validator](https://www.npmjs.com/package/password-validator) 
